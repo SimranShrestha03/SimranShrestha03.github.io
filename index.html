@@ -32,17 +32,16 @@
   <div id="root"></div>
 
   <script type="text/babel">
-
     const experience = [
       {
         role: "Data Automation Intern",
         company: "Great American Insurance Group",
         date: "Sep 2025 – Present",
         bullets: [
-          "Built integration testing system for Informatica CI/CD pipeline enabling early defect detection.",
-          "Created centralized FastAPI repository improving deployment & onboarding speed.",
-          "Documented previously undocumented repositories with detailed setup & contribution guides.",
-          "Wrote new Copilot guidelines to improve developer experience across engineering teams.",
+          "Built integration testing system for an Informatica CI/CD pipeline enabling early defect detection.",
+          "Created a centralized FastAPI repository that improved deployment speed and onboarding.",
+          "Documented previously undocumented repositories with setup, testing, and contribution guides.",
+          "Authored updated Copilot guidelines based on internal and community best practices."
         ]
       },
       {
@@ -50,19 +49,19 @@
         company: "Great American Insurance Group",
         date: "May 2024 – Aug 2024",
         bullets: [
-          "Worked with Informatica Cloud (IDMC) to fix balancing report defects and improve month-end reporting.",
-          "Used SQL & Snowflake to validate and query large financial datasets.",
-          "Created documentation for Informatica jobs to improve knowledge transfer.",
-          "Built SharePoint Modern sites to improve visibility of SOPs and team documentation."
+          "Worked with Informatica Cloud (IDMC) to fix balancing report defects for month end reporting.",
+          "Used SQL and Snowflake to validate and query financial datasets for accurate reporting.",
+          "Created documentation for Informatica jobs to simplify knowledge transfer.",
+          "Built and maintained SharePoint Modern sites to centralize SOPs and technical documentation."
         ]
       },
       {
-        role: "Teaching Assistant (Intro to Python)",
+        role: "Teaching Assistant · Intro to Python",
         company: "Northern Kentucky University",
         date: "Aug 2023 – Dec 2023",
         bullets: [
-          "Tutored 22 students in Python programming and debugging.",
-          "Held weekly office hours and live coding sessions for problem-solving.",
+          "Tutored 22 students in Python programming and problem solving.",
+          "Held weekly office hours and live coding sessions to build debugging and problem mindset."
         ]
       }
     ];
@@ -71,8 +70,8 @@
       {
         title: "NKU AI Chatbot",
         tech: ["Python", "BeautifulSoup", "GPT-2", "Jina API"],
-        desc: "Designed and finetuned an NKU chatbot using 1,611 scraped website samples. Achieved a 10–15% accuracy improvement over ChatGPT.",
-      },
+        desc: "Designed an NKU specific chatbot using 1,611 scraped website samples. Cleaned and finetuned a GPT-2 based model achieving around 10–15 percent better response accuracy compared to ChatGPT on NKU queries."
+      }
     ];
 
     const skills = [
@@ -91,14 +90,32 @@
       <header className="text-center py-20 bg-gradient-to-b from-black to-darkbg">
         <h1 className="text-5xl font-bold">Simran Shrestha</h1>
         <p className="text-gray-400 mt-4 text-lg">
-          Senior Computer Science Student • Data + Software Engineering
+          Senior Computer Science Student · Data and Software Engineering
         </p>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-4">
-          <a href="mailto:simranshrestha0432@gmail.com"
-            className="text-accent underline">simranshrestha0432@gmail.com</a>
-          <a href="YOUR_LINKEDIN_URL" className="text-accent underline">LinkedIn</a>
-          <a href="https://github.com/YOURUSERNAME" className="text-accent underline">GitHub</a>
+        <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
+          <a
+            href="mailto:simranshrestha0432@gmail.com"
+            className="text-accent underline"
+          >
+            simranshrestha0432@gmail.com
+          </a>
+          <a
+            href="https://www.linkedin.com/in/simran-shrestha-658882247/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-accent underline"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/SimranShrestha03"
+            target="_blank"
+            rel="noreferrer"
+            className="text-accent underline"
+          >
+            GitHub
+          </a>
         </div>
       </header>
     );
@@ -119,7 +136,12 @@
         <p className="text-gray-300 mt-2">{project.desc}</p>
         <div className="flex flex-wrap gap-2 mt-4">
           {project.tech.map(t => (
-            <span key={t} className="px-3 py-1 bg-gray-800 rounded-full text-xs">{t}</span>
+            <span
+              key={t}
+              className="px-3 py-1 bg-gray-800 rounded-full text-xs"
+            >
+              {t}
+            </span>
           ))}
         </div>
       </div>
@@ -131,28 +153,38 @@
 
         <Section title="Objective">
           <p className="text-gray-300 max-w-3xl">
-            Senior CS undergraduate passionate about data engineering, backend systems, and
-            automation. Seeking opportunities to apply my technical skills and contribute to
-            impactful, fast-paced engineering teams.
+            Senior CS undergraduate passionate about data and software development.
+            I enjoy building data driven systems, automation pipelines, and backend services
+            that support real business use cases. I am seeking opportunities where I can
+            contribute to impactful engineering projects in collaborative, tech driven teams.
           </p>
         </Section>
 
         <Section title="Experience">
           <div className="grid md:grid-cols-2 gap-6">
-            {experience.map((ex, i) => <ExperienceCard key={i} item={ex} />)}
+            {experience.map((ex, i) => (
+              <ExperienceCard key={i} item={ex} />
+            ))}
           </div>
         </Section>
 
         <Section title="Projects">
           <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((p, i) => <ProjectCard key={i} project={p} />)}
+            {projects.map((p, i) => (
+              <ProjectCard key={i} project={p} />
+            ))}
           </div>
         </Section>
 
         <Section title="Skills">
           <div className="flex flex-wrap gap-3">
             {skills.map(s => (
-              <span key={s} className="px-3 py-1 bg-gray-800 rounded-full text-sm">{s}</span>
+              <span
+                key={s}
+                className="px-3 py-1 bg-gray-800 rounded-full text-sm"
+              >
+                {s}
+              </span>
             ))}
           </div>
         </Section>
@@ -165,7 +197,6 @@
 
     const root = ReactDOM.createRoot(document.getElementById("root"));
     root.render(<App />);
-
   </script>
 </body>
 </html>

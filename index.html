@@ -24,7 +24,7 @@
           }
         }
       }
-    }
+    };
   </script>
 </head>
 
@@ -36,32 +36,31 @@
       {
         role: "Data Automation Intern",
         company: "Great American Insurance Group",
-        date: "Sep 2025 – Present",
+        date: "Sep 2025 - Present",
         bullets: [
-          "Built integration testing system for an Informatica CI/CD pipeline enabling early defect detection.",
-          "Created a centralized FastAPI repository that improved deployment speed and onboarding.",
-          "Documented previously undocumented repositories with setup, testing, and contribution guides.",
-          "Authored updated Copilot guidelines based on internal and community best practices."
+          "Engineered an integration testing system for an Informatica CI/CD pipeline to catch issues earlier in the release cycle.",
+          "Built a centralized FastAPI application repository following team best practices to improve deployment speed and onboarding.",
+          "Fully documented a previously undocumented repository, including setup, testing workflow, and contribution guidelines.",
+          "Authored Copilot usage guidelines to standardize AI assisted development across engineering teams."
         ]
       },
       {
         role: "Data Engineer Intern",
         company: "Great American Insurance Group",
-        date: "May 2024 – Aug 2024",
+        date: "May 2024 - Aug 2024",
         bullets: [
-          "Worked with Informatica Cloud (IDMC) to fix balancing report defects for month end reporting.",
-          "Used SQL and Snowflake to validate and query financial datasets for accurate reporting.",
-          "Created documentation for Informatica jobs to simplify knowledge transfer.",
-          "Built and maintained SharePoint Modern sites to centralize SOPs and technical documentation."
+          "Used Informatica Cloud (IDMC), SQL, and Snowflake to troubleshoot and validate financial datasets for month end reporting.",
+          "Created documentation for Informatica jobs so support teams could understand flows without deep mapping analysis.",
+          "Built and maintained SharePoint Modern sites to organize SOPs and improve visibility of team processes."
         ]
       },
       {
-        role: "Teaching Assistant · Intro to Python",
+        role: "Teaching Assistant - Introduction to Python",
         company: "Northern Kentucky University",
-        date: "Aug 2023 – Dec 2023",
+        date: "Aug 2023 - Dec 2023",
         bullets: [
-          "Tutored 22 students in Python programming and problem solving.",
-          "Held weekly office hours and live coding sessions to build debugging and problem mindset."
+          "Tutored 22 students through weekly office hours and problem solving sessions.",
+          "Led live coding demonstrations to help students build a stronger debugging and problem solving mindset."
         ]
       }
     ];
@@ -70,75 +69,118 @@
       {
         title: "NKU AI Chatbot",
         tech: ["Python", "BeautifulSoup", "GPT-2", "Jina API"],
-        desc: "Designed an NKU specific chatbot using 1,611 scraped website samples. Cleaned and finetuned a GPT-2 based model achieving around 10–15 percent better response accuracy compared to ChatGPT on NKU queries."
+        desc: "Built an NKU focused chatbot by scraping and cleaning 1,611 samples from the university website, then fine tuning GPT-2. Achieved roughly 10 to 15 percent better response accuracy on NKU queries compared to ChatGPT.",
       }
+      // You can add more projects here later
     ];
 
     const skills = [
-      "Python", "R", "SQL", "Java", "Git", "GitHub Actions", "Docker",
-      "Snowflake", "Informatica", "Microsoft 365"
+      "Python",
+      "R",
+      "SQL",
+      "Java",
+      "Git",
+      "GitHub Actions",
+      "Docker",
+      "Snowflake",
+      "Informatica Cloud (IDMC)",
+      "Microsoft 365"
     ];
 
     const Section = ({ title, children }) => (
       <section className="max-w-5xl mx-auto px-6 py-10">
-        <h2 className="text-3xl font-semibold mb-6">{title}</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">{title}</h2>
         {children}
       </section>
     );
 
     const Header = () => (
-      <header className="text-center py-20 bg-gradient-to-b from-black to-darkbg">
-        <h1 className="text-5xl font-bold">Simran Shrestha</h1>
-        <p className="text-gray-400 mt-4 text-lg">
-          Senior Computer Science Student · Data and Software Engineering
-        </p>
+      <header className="border-b border-gray-800 bg-gradient-to-b from-black to-darkbg">
+        <div className="max-w-5xl mx-auto px-6 pt-10 pb-16">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-indigo-300">
+                Portfolio
+              </p>
+              <h1 className="mt-2 text-3xl md:text-4xl lg:text-5xl font-bold">
+                Simran Shrestha
+              </h1>
+              <p className="text-gray-400 mt-3 text-sm md:text-base">
+                Data Engineering and Software Engineering Student
+              </p>
+            </div>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
-          <a
-            href="mailto:simranshrestha0432@gmail.com"
-            className="text-accent underline"
-          >
-            simranshrestha0432@gmail.com
-          </a>
-          <a
-            href="https://www.linkedin.com/in/simran-shrestha-658882247/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-accent underline"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/SimranShrestha03"
-            target="_blank"
-            rel="noreferrer"
-            className="text-accent underline"
-          >
-            GitHub
-          </a>
+            <div className="flex flex-col items-end gap-3">
+              <a
+                href="simran_shrestha_resume_.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full bg-accent px-4 py-2 text-xs md:text-sm font-medium text-white hover:bg-indigo-600"
+              >
+                Download Resume
+              </a>
+              <div className="flex flex-wrap justify-end gap-3 text-xs md:text-sm">
+                <a
+                  href="mailto:simranshrestha0432@gmail.com"
+                  className="text-indigo-300 hover:text-indigo-200"
+                >
+                  simranshrestha0432@gmail.com
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/simran-shrestha-658882247/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-indigo-300 hover:text-indigo-200"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/SimranShrestha03"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-indigo-300 hover:text-indigo-200"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-8 max-w-3xl text-sm md:text-base text-gray-300">
+            I am a senior Computer Science student at Northern Kentucky University with a
+            strong focus on data engineering, backend development, and automation. I enjoy
+            turning complex processes into simple, reliable systems that support real
+            business workflows.
+          </p>
         </div>
       </header>
     );
 
     const ExperienceCard = ({ item }) => (
-      <div className="bg-card rounded-xl p-6 border border-gray-700 shadow-lg">
-        <h3 className="text-xl font-semibold">{item.role}</h3>
-        <p className="text-gray-400">{item.company} • {item.date}</p>
+      <div className="bg-card rounded-xl p-6 border border-gray-800 shadow-sm">
+        <h3 className="text-lg font-semibold">{item.role}</h3>
+        <p className="text-gray-400 text-sm mt-1">
+          {item.company} · {item.date}
+        </p>
         <ul className="mt-4 space-y-2 list-disc list-inside text-gray-300 text-sm">
-          {item.bullets.map((b, i) => <li key={i}>{b}</li>)}
+          {item.bullets.map((b, i) => (
+            <li key={i}>{b}</li>
+          ))}
         </ul>
       </div>
     );
 
     const ProjectCard = ({ project }) => (
-      <div className="bg-card p-6 border border-gray-700 rounded-xl shadow-lg">
-        <h3 className="text-xl font-semibold">{project.title}</h3>
-        <p className="text-gray-300 mt-2">{project.desc}</p>
+      <div className="bg-card rounded-xl p-6 border border-gray-800 shadow-sm">
+        <h3 className="text-lg font-semibold">{project.title}</h3>
+        <p className="mt-2 text-gray-300 text-sm">
+          {project.desc}
+        </p>
         <div className="flex flex-wrap gap-2 mt-4">
-          {project.tech.map(t => (
+          {project.tech.map((t) => (
             <span
               key={t}
-              className="px-3 py-1 bg-gray-800 rounded-full text-xs"
+              className="px-3 py-1 bg-gray-800 rounded-full text-xs text-gray-200"
             >
               {t}
             </span>
@@ -152,11 +194,11 @@
         <Header />
 
         <Section title="Objective">
-          <p className="text-gray-300 max-w-3xl">
-            Senior CS undergraduate passionate about data and software development.
-            I enjoy building data driven systems, automation pipelines, and backend services
-            that support real business use cases. I am seeking opportunities where I can
-            contribute to impactful engineering projects in collaborative, tech driven teams.
+          <p className="text-gray-300 max-w-3xl text-sm md:text-base">
+            Senior CS undergraduate passionate about data and software development. I enjoy
+            building data pipelines, automation systems, and backend services that support
+            real users. I am looking for opportunities to contribute to impactful engineering
+            projects in collaborative, tech driven environments.
           </p>
         </Section>
 
@@ -178,10 +220,10 @@
 
         <Section title="Skills">
           <div className="flex flex-wrap gap-3">
-            {skills.map(s => (
+            {skills.map((s) => (
               <span
                 key={s}
-                className="px-3 py-1 bg-gray-800 rounded-full text-sm"
+                className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-100"
               >
                 {s}
               </span>
@@ -189,8 +231,47 @@
           </div>
         </Section>
 
-        <footer className="text-center py-6 text-gray-500 text-sm">
-          © {new Date().getFullYear()} Simran Shrestha
+        <Section title="Contact">
+          <div className="space-y-2 text-sm md:text-base text-gray-300">
+            <p>
+              Email:
+              <a
+                href="mailto:simranshrestha0432@gmail.com"
+                className="ml-1 text-indigo-300 hover:text-indigo-200"
+              >
+                simranshrestha0432@gmail.com
+              </a>
+            </p>
+            <p>
+              GitHub:
+              <a
+                href="https://github.com/SimranShrestha03"
+                target="_blank"
+                rel="noreferrer"
+                className="ml-1 text-indigo-300 hover:text-indigo-200"
+              >
+                github.com/SimranShrestha03
+              </a>
+            </p>
+            <p>
+              LinkedIn:
+              <a
+                href="https://www.linkedin.com/in/simran-shrestha-658882247/"
+                target="_blank"
+                rel="noreferrer"
+                className="ml-1 text-indigo-300 hover:text-indigo-200"
+              >
+                simran-shrestha-658882247
+              </a>
+            </p>
+          </div>
+        </Section>
+
+        <footer className="border-t border-gray-800 py-6">
+          <div className="max-w-5xl mx-auto px-6 text-xs md:text-sm text-gray-500 flex flex-col md:flex-row items-center justify-between gap-2">
+            <span>© {new Date().getFullYear()} Simran Shrestha</span>
+            <span>Built with React and Tailwind CSS</span>
+          </div>
         </footer>
       </>
     );

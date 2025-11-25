@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simran Shrestha | Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- React + ReactDOM + Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkbg: "#020617",
+            card: "#0F172A",
+            accent: "#4F46E5",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-darkbg text-gray-200">
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    const experience = [
+      {
+        role: "Data Automation Intern",
+        company: "Great American Insurance Group",
+        date: "Sep 2025 – Present",
+        bullets: [
+          "Built integration testing system for Informatica CI/CD pipeline enabling early defect detection.",
+          "Created centralized FastAPI repository improving deployment & onboarding speed.",
+          "Documented previously undocumented repositories with detailed setup & contribution guides.",
+          "Wrote new Copilot guidelines to improve developer experience across engineering teams.",
+        ]
+      },
+      {
+        role: "Data Engineer Intern",
+        company: "Great American Insurance Group",
+        date: "May 2024 – Aug 2024",
+        bullets: [
+          "Worked with Informatica Cloud (IDMC) to fix balancing report defects and improve month-end reporting.",
+          "Used SQL & Snowflake to validate and query large financial datasets.",
+          "Created documentation for Informatica jobs to improve knowledge transfer.",
+          "Built SharePoint Modern sites to improve visibility of SOPs and team documentation."
+        ]
+      },
+      {
+        role: "Teaching Assistant (Intro to Python)",
+        company: "Northern Kentucky University",
+        date: "Aug 2023 – Dec 2023",
+        bullets: [
+          "Tutored 22 students in Python programming and debugging.",
+          "Held weekly office hours and live coding sessions for problem-solving.",
+        ]
+      }
+    ];
+
+    const projects = [
+      {
+        title: "NKU AI Chatbot",
+        tech: ["Python", "BeautifulSoup", "GPT-2", "Jina API"],
+        desc: "Designed and finetuned an NKU chatbot using 1,611 scraped website samples. Achieved a 10–15% accuracy improvement over ChatGPT.",
+      },
+    ];
+
+    const skills = [
+      "Python", "R", "SQL", "Java", "Git", "GitHub Actions", "Docker",
+      "Snowflake", "Informatica", "Microsoft 365"
+    ];
+
+    const Section = ({ title, children }) => (
+      <section className="max-w-5xl mx-auto px-6 py-10">
+        <h2 className="text-3xl font-semibold mb-6">{title}</h2>
+        {children}
+      </section>
+    );
+
+    const Header = () => (
+      <header className="text-center py-20 bg-gradient-to-b from-black to-darkbg">
+        <h1 className="text-5xl font-bold">Simran Shrestha</h1>
+        <p className="text-gray-400 mt-4 text-lg">
+          Senior Computer Science Student • Data + Software Engineering
+        </p>
+
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
+          <a href="mailto:simranshrestha0432@gmail.com"
+            className="text-accent underline">simranshrestha0432@gmail.com</a>
+          <a href="YOUR_LINKEDIN_URL" className="text-accent underline">LinkedIn</a>
+          <a href="https://github.com/YOURUSERNAME" className="text-accent underline">GitHub</a>
+        </div>
+      </header>
+    );
+
+    const ExperienceCard = ({ item }) => (
+      <div className="bg-card rounded-xl p-6 border border-gray-700 shadow-lg">
+        <h3 className="text-xl font-semibold">{item.role}</h3>
+        <p className="text-gray-400">{item.company} • {item.date}</p>
+        <ul className="mt-4 space-y-2 list-disc list-inside text-gray-300 text-sm">
+          {item.bullets.map((b, i) => <li key={i}>{b}</li>)}
+        </ul>
+      </div>
+    );
+
+    const ProjectCard = ({ project }) => (
+      <div className="bg-card p-6 border border-gray-700 rounded-xl shadow-lg">
+        <h3 className="text-xl font-semibold">{project.title}</h3>
+        <p className="text-gray-300 mt-2">{project.desc}</p>
+        <div className="flex flex-wrap gap-2 mt-4">
+          {project.tech.map(t => (
+            <span key={t} className="px-3 py-1 bg-gray-800 rounded-full text-xs">{t}</span>
+          ))}
+        </div>
+      </div>
+    );
+
+    const App = () => (
+      <>
+        <Header />
+
+        <Section title="Objective">
+          <p className="text-gray-300 max-w-3xl">
+            Senior CS undergraduate passionate about data engineering, backend systems, and
+            automation. Seeking opportunities to apply my technical skills and contribute to
+            impactful, fast-paced engineering teams.
+          </p>
+        </Section>
+
+        <Section title="Experience">
+          <div className="grid md:grid-cols-2 gap-6">
+            {experience.map((ex, i) => <ExperienceCard key={i} item={ex} />)}
+          </div>
+        </Section>
+
+        <Section title="Projects">
+          <div className="grid md:grid-cols-2 gap-6">
+            {projects.map((p, i) => <ProjectCard key={i} project={p} />)}
+          </div>
+        </Section>
+
+        <Section title="Skills">
+          <div className="flex flex-wrap gap-3">
+            {skills.map(s => (
+              <span key={s} className="px-3 py-1 bg-gray-800 rounded-full text-sm">{s}</span>
+            ))}
+          </div>
+        </Section>
+
+        <footer className="text-center py-6 text-gray-500 text-sm">
+          © {new Date().getFullYear()} Simran Shrestha
+        </footer>
+      </>
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+
+  </script>
+</body>
+</html>

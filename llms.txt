@@ -1,0 +1,48 @@
+# Simran Shrestha — Portfolio
+
+> Personal portfolio site for Simran Shrestha, a Computer Science senior at Northern Kentucky University
+> specializing in data engineering, CI/CD automation, and backend development.
+
+## Contact
+- Email: simranshrestha0432@gmail.com
+- LinkedIn: https://www.linkedin.com/in/simran-shrestha-658882247/
+- GitHub: https://github.com/SimranShrestha03
+- Portfolio: https://simranshrestha03.github.io
+
+## Education
+**Northern Kentucky University** — Highland Heights, KY
+Bachelor of Science in Computer Science | Minor in Data Science
+Expected Graduation: May 2026
+
+## Experience
+
+### Data Automation Intern — Great American Insurance Group (Sep 2025 – Present)
+- Developed an integration testing system for an Informatica CI/CD pipeline, creating a scalable framework for early issue detection.
+- Analyzed GitHub CI workflows performing SAST scans to identify and remediate critical and high CVEs.
+- Built a Postman collection for Snowflake integration featuring automated JWT generation, UDF/stored procedure queries, and Snowflake SQL API execution.
+- Accelerated FastAPI application deployment by building a centralized repository following team best practices.
+- Documented a previously undocumented repository including setup, local testing, and contribution guidelines.
+- Developed unit tests for an AI application that builds business dossiers from public resources using Tavily and Azure Maps.
+- Produced comprehensive Copilot usage guidelines using best practices from within the organization and the broader development community.
+- Authored Copilot code-review guidelines to enforce Python coding standards, improve code quality, and reduce errors across the org.
+- Organized interviews with 25 members across the enterprise spanning data, AI automation, business, and security teams.
+- Collaborated in an Agile environment with a multidisciplinary team.
+
+### Data Engineer Intern — Great American Insurance Group (May 2024 – Aug 2024)
+- Used Informatica Cloud (IDMC), SQL, and Snowflake to troubleshoot and validate financial datasets for month-end reporting.
+- Authored documentation for Informatica jobs, streamlining knowledge transfer for support teams.
+- Built and maintained SharePoint Modern sites to organize SOPs and improve visibility of team processes.
+
+### Teaching Assistant — Introduction to Python, Northern Kentucky University (Aug 2023 – Dec 2023)
+- Tutored 22 students through weekly office hours and problem-solving sessions.
+- Led live coding demonstrations to build stronger debugging and problem-solving mindsets.
+
+## Projects
+
+### NKU AI Chatbot
+Stack: Python, BeautifulSoup, GPT-2, Jina API
+Scraped and cleaned 1,611 data samples from NKU's website, converted them to text files, and fine-tuned GPT-2.
+Achieved 10–15% better response accuracy on NKU-related queries compared to ChatGPT.
+
+## Skills
+Python, SQL, Java, R, Git, GitHub Actions, Docker, CI/CD, Snowflake, Informatica Cloud (IDMC), FastAPI, Postman, Microsoft 365
